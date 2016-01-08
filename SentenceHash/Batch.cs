@@ -33,6 +33,7 @@ namespace SentenceHash
         public void writeTextBatch(StreamWriter sw)
         {
             sw.Write(ElementSize);
+            sw.Write(BatchSize);
             foreach(int i in sampleIdx)
             {
                 sw.Write(i);
@@ -50,6 +51,7 @@ namespace SentenceHash
         public void writeBinaryBatch(BinaryWriter bw)
         {
             bw.Write(ElementSize);
+            bw.Write(BatchSize);
             foreach (int i in sampleIdx)
             {
                 bw.Write(i);
